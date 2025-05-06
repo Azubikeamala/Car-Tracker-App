@@ -1,16 +1,12 @@
 {
   "rules": {
-    ".read": false,
-    ".write": false,
-    "groceries": {
-      "$uid": {
-        ".read": "auth != null && auth.uid == $uid",
-        ".write": "auth != null && auth.uid == $uid"
-      }
+    "cars": {
+      ".read": "auth != null",
+      ".write": "auth != null"
     },
-    "todos": {
-      ".read": true,
-      ".write": true
+    "users": {
+      ".read": "auth != null",
+      ".write": "auth != null"
     }
   }
 }
